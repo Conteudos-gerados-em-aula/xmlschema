@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="www.aulaws.com.br"
+    xmlns:ws="www.aulaws.com.br">
+    
+    <xs:include schemaLocation="./endereco.xsd"></xs:include>
+    <xs:element name="cliente" type="ws:type_cliente"/>
+
+    <xs:complexType name="type_cliente">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="cpfOuCnpj" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="tipoCliente">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Pessoa Fisica"/>
+                        <xs:enumeration value="Pessoa Juridica"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="enderecos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="endereco" type="ws:type_endereco" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required" />
+    </xs:complexType>
+</xs:schema>

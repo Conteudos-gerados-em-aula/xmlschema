@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.aulaws.com.br" xmlns:ws="www.aulaws.com.br">
+
+    <xs:include schemaLocation="./estado.xsd"></xs:include>
+
+    <xs:complexType name="type_cidade">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string" />
+            <xs:element name="uf" type="ws:type_estado" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required" />
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aulaws:cliente id="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aulaws="www.aulaws.com.br" xsi:schemaLocation="www.aulaws.com.br ./xsd/cliente.xsd">
+
+    <nome></nome>
+    <cpfOuCnpj></cpfOuCnpj>
+    <email></email>
+    <tipoCliente>Pessoa Juridica</tipoCliente>
+    <enderecos>
+        <endereco id="1">
+            <logradouro>190</logradouro>
+            <numero>1</numero>
+            <complemento>1111</complemento>
+            <bairro>Centro</bairro>
+            <cep>74000000</cep>
+            <cidade id="1">
+                <nome>Campo Grande</nome>
+                <uf id="1">
+                    <nome>Mato Grosso do Sul</nome>
+                </uf>
+            </cidade>
+        </endereco>
+
+        <endereco id="2">
+            <logradouro>190</logradouro>
+            <numero>1</numero>
+            <complemento>1111</complemento>
+            <bairro>Centro</bairro>
+            <cep>74000000</cep>
+            <cidade id="1">
+                <nome>Goiania</nome>
+                <uf id="1">
+                    <nome>Goias</nome>
+                </uf>
+            </cidade>
+        </endereco>
+
+    </enderecos>
+
+
+</aulaws:cliente>
